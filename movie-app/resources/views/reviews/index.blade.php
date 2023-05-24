@@ -41,66 +41,20 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Twenty One Twenty Five</td>
-                        <td>Fifi1406</td>
-                        <td>9.8</td>
-                        <td>Sebuah film yang seperti menggambarkan kehidupan kisah cinta dan cita-cita saya</td>
-                        <td>14 juni 2022</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>StarUp</td>
-                        <td>Fia12</td>
-                        <td>8.5</td>
-                        <td>mengajarkan untuk menjadi seorang yang tak pantang menyerah</td>
-                        <td>mei 2020</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Dilwale</td>
-                        <td>Ruspa17</td>
-                        <td>9.0</td>
-                        <td>Film nya sungguh mengagumkan</td>
-                        <td> maret 2021</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Janam Janam</td>
-                        <td>Resita</td>
-                        <td>9.5</td>
-                        <td>I love it this my film</td>
-                        <td>juni 2020</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Magic Hour</td>
-                        <td>Fio23</td>
-                        <td>9.0</td>
-                        <td>mengajarkan ketulusan cinta sesungguhnya</td>
-                        <td>november 2018</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
+                @foreach ($reviews as $review)
+                <tr>
+                    <td>{{ $review['no'] }}</td>
+                    <td>{{ $review['film'] }}</td>
+                    <td>{{ $review['user'] }}</td>
+                    <td>{{ $review['rating'] }}</td>
+                    <td>{{ $review['review'] }}</td>
+                    <td>{{ $review['tanggal'] }}</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
+                    </td>
+                </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>
