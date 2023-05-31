@@ -30,3 +30,6 @@ Route::get('/movies', [MovieController::class, 'index']);
 Route::get('/genres', [GenreController::class, 'index']);
 
 Route::get('/reviews', [ReviewController::class, 'index']);
+
+
+

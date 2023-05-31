@@ -42,18 +42,18 @@
                 </tfoot>
                 <tbody>
                 @foreach ($reviews as $review)
-                <tr>
-                    <td>{{ $review['no'] }}</td>
-                    <td>{{ $review['film'] }}</td>
-                    <td>{{ $review['user'] }}</td>
-                    <td>{{ $review['rating'] }}</td>
-                    <td>{{ $review['review'] }}</td>
-                    <td>{{ $review['tanggal'] }}</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $review->film }}</td>
+                        <td>{{ $review->user }}</td>
+                        <td>{{ $review->rating }}</td>
+                        <td>{{ $review->review }}</td>
+                        <td>{{ $review->tanggal }}</td>
+                        <td>
+                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
+                        </td>
+                    </tr>
                 @endforeach
                 </tbody>
             </table>
