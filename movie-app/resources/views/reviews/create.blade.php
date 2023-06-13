@@ -20,12 +20,11 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Edit Data
+            Reviews Data
         </div>
         <div class="card-body">
             <form method="POST" action="/reviews">
                 @csrf
-                @method('PUT')
                 <div>
                     <label for="film">Film:</label>
                     <input type="text" id="film" name="film">
@@ -46,6 +45,7 @@
                     <label for="tanggal">Tanggal:</label>
                     <input type="date" id="tanggal" name="tanggal">
                 </div>
+
                 <button type="submit">Add</button>
             </form>
         </div>

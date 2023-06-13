@@ -37,9 +37,9 @@ class ReviewController extends Controller
         $validatedData = $request->validate([
             'film' => 'required',
             'user' => 'required',
-            'rating' => 'required',
+            'rating' => 'required|numeric',
             'review' => 'required',
-            'tanggal' => 'required|integer',
+            'tanggal' => 'date',
         ]);
     
         Review::create($validatedData);
@@ -60,7 +60,8 @@ class ReviewController extends Controller
      */
     public function edit(Review $review)
     {
-        //
+        $genres = Genre::all();
+        return view('reviews.edit', compact('review', 'genres'));
     }
 
     /**
@@ -68,7 +69,17 @@ class ReviewController extends Controller
      */
     public function update(Request $request, Review $review)
     {
-        //
+        $validatedData = $request->validate([
+            'film' => 'required',
+            'user' => 'required',
+            'rating' => 'required|numeric',
+            'review' => 'required',
+            'tanggal' => 'date',
+
+        ]);
+
+        $review->update($validatedData);
+        return redirect('/reviews')->with('success', 'Data berhasil di-update!');
     }
 
     /**

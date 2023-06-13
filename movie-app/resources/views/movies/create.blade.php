@@ -20,12 +20,11 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Edit Data
+            Movies Data
         </div>
         <div class="card-body">
             <form method="POST" action="/movies">
                 @csrf
-                @method('PUT')
                 <div>
                     <label for="judul">Title:</label>
                     <input type="text" id="judul" name="judul">

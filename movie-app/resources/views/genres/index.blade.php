@@ -47,12 +47,12 @@
                         <td>{{ $genre->deskripsi }}</td>
 
                         <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <form action="/genre/{{ $genre->id }}" method="POST">
+                            <a href="/genres/{{$genre->id}}/edit" class="btn btn-sm btn-warning"> Edit</a>
+                                <form action="/genres/{{$genre->id}}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Delete</button>
-                            </form>
+                                </form>
                         </td>
                     </tr>
                 @endforeach

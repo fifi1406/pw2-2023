@@ -28,5 +28,7 @@ class GenresSeeder extends Seeder
             'deskripsi' => 'Scary movies',
         ]);
 
+
+
     }
 }
